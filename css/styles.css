@@ -1,0 +1,94 @@
+html {
+	box-sizing: border-box;						/*Использую алгоритм расчета при котором ширина и высота включают в себя значения полей и границ, но не margin'ов*/
+}
+
+*,
+*::before,										/*Псевдоэлементы*/
+*::after {
+	box-sizing: inherit;						/*Наследуем значение родителя*/
+}
+
+body {
+	min-width: 320px;							/*Устанавливаем минимальную ширину окна сайта*/
+	background: #f9f9f9;					/*Фоновой цвет*/
+	font: 14px Arial, sans-serif;				/*Размер, стиль текста страницы*/
+	line-height: 1.5em;							/*Интервал по умолчанию*/
+	color: #000;								/*Цвет текста по умолчанию*/
+}
+
+
+.list-style-reset {                             /*Маркированный список*/
+    padding: 0;                                 /*Сбрасываю внутренние отступы*/
+    margin: 0;                                  /*Сбрасываю внешние отступы*/
+    list-style: none;                           /*Обнуление списков*/
+}
+
+.container {								/*Контейнер для содержимого*/
+    max-width: 878px;							/*Ширина*/
+    margin: 0 auto;								/*Выравниваю по центру*/
+}
+
+img {
+	max-width: 100%;							/*Устанавливаем для адаптивности картинок*/
+}
+
+a {
+    text-decoration: none;						/*Убираю подчеркивание у ссылок по умолчанию*/
+    color: inherit;								/*Унаследует значение родителя*/
+}
+
+
+.reset {
+    margin: 0;
+}
+
+/* Поля ввода */
+input, textarea {
+
+    /* цвет фона */
+    background: #f9f9f9;
+
+    /* граница */
+    border: 1px solid #e3e3e3;  
+}
+
+button {
+    /* обнуляю границу */
+    border: 0;
+    padding: 0;
+}
+
+/* убираю у данного элемента границу */
+fieldset {
+    border: 0;
+}
+
+/*метка для полей ввода*/
+label {
+    /* включаем блочное отображение*/
+    display: block;
+
+    /* меняем курсор */
+    cursor: pointer;
+}
+
+.dolist-container {
+    padding-top: 53px;
+}
+
+.visually-hidden {								/*Код для скрытия заголовков*/
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+    border: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden;
+}
+
+.clearfix::after {								/*Clearfix свойство помогает бороться с выпадание дочерних элементов из родительских*/
+  content: "";
+  display: table;
+  clear: both;
+}

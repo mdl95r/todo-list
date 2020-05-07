@@ -1,0 +1,275 @@
+/* левая колонка */
+.dolist-col {
+    /* ширина колонки */
+    width: 430px;
+
+    /* размещаем в строчку */
+    display: inline-block;
+}
+
+/* надпись "Список пуст" */
+.list-null {
+    /* цвет текста */
+    color: #8993ad;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* заголовок для левой колонки */
+.dolist-col__title {
+    /* внешний отступ */
+    margin-bottom: 63px;
+}
+
+/* пункт списка */
+.list-item {
+    /* фон пункта */
+    background: #fff;
+
+    /* нижний отступ */
+    margin-bottom: 20px;
+}
+
+/* шапка дела */
+.list-item__header {
+    /* позиционируем, делаем родителем */
+    position: relative;
+
+    /* нижняя граница */
+    border-bottom: 1px solid #e5e5e5;
+
+    /* внутренний отступ */
+    padding: 10px 40px 10px 15px;    
+}
+
+/* слайдер дела*/
+.list-item__slider {
+    /* внутренний отступ */
+    padding: 10px 15px 60px;
+
+    /* цвет текста */
+    color: #8993ad;
+}
+
+/* Кнопка слайдера */
+.list-item__stripe-btn {
+        /* позиционирую */
+        position: absolute;
+        right: 10px;
+        top: 17px;
+
+        /*меняю курсор при наведении*/
+        cursor: pointer;
+
+        /* задаю фон */
+        background: #fff;
+
+        /* высота */
+        height: 21px;
+
+        /* ширина */
+        width: 21px;
+}
+
+/* переключатель слайдера */
+.list-item__stripe-btn:after {
+    /*обязательный параметр для after*/
+    content: "";
+    /*позиционирую*/
+    position: absolute;
+    top: 9px;
+    right: 7px;
+
+    /*изображение стрелки без повторений*/
+    background: url("../img/stripe.png");
+    /*высота*/
+    height: 5px;
+    /*ширина*/
+    width: 6px;
+
+    /* создаю переход для плавного поворота стрелки*/
+    transition: transform .4s;
+    -webkit-transition: transform .4s;
+    -moz-transition: transform .4s;
+    -ms-transition: transform .4s;
+    -o-transition: transform .4s;
+}
+
+/* создаю доп. класс и поворачиваю стрелку */
+.up-task:after {
+    /* поворачиваю стрелку */
+    transform: rotate(180deg);
+
+    /* создаю переход для плавного поворота стрелки*/
+    transition: transform .4s;
+    top: 8px;
+    -webkit-transition: transform .4s;
+    -moz-transition: transform .4s;
+    -ms-transition: transform .4s;
+    -o-transition: transform .4s;
+}
+
+/* заголовок для дела */
+.list-item__title {
+    /* убираю блочную модель отображения для выравнивания в строку */
+    display: inline-block;
+
+    /* внешний отступ вправо */
+    margin-right: 15px;
+}
+
+/* кнопка стереть дело */
+.list-item__btn-clear {
+    
+    /* позиционирую */
+    position: relative;
+    top: 5px;
+    
+    /* меняю курсор при наведении */
+    cursor: pointer;
+
+    /* убираю блочную модель отображения для выравнивания в строку */
+    display: inline-block;
+    /* ширина */
+    width: 22px;
+
+    /* высота */
+    height: 22px;
+    
+    /* задаю фон */
+    background: #fff;
+}
+
+/* псевдо элемент кнопки стереть дело */
+.list-item__btn-clear:after {
+    /* обязательный параметр для after */
+    content: "";
+
+    /* позиционирую */
+    position: absolute;
+    top: 7px;
+    left: 6px;
+
+    /* изображение кнопки стереть без повторений*/
+    background: url("../img/clear-button.png") no-repeat;
+
+    /* высота */
+    height: 10px;
+
+    /* ширина */  
+    width: 9px;
+}
+
+/* общие стили для главных заголовков в 2 колонках*/
+.title {
+    /* размер шрифта */
+    font-size: 19px;
+
+    /* убираем жирный шрифт */
+    font-weight: normal;
+}
+
+/* колонка для создания дела*/
+.newdo-col {
+    /* смещаем вправо */
+    float: right;
+
+    /* указываем ширину колонки */
+    width: 432px;
+}
+
+/* стили для заголовка правой колонки */
+.newdo-col__title {
+    /* внешний отступ*/
+    margin-bottom: 29px;
+}
+
+/* блок группировки элементов ввода */
+.form-main {
+    /* цвет фона */
+    background: #fff;
+    
+    /* внутренний отступ */
+    padding: 39px 34px 50px;
+}
+
+/* блок для ввода названия дела */
+.newdo-name {
+    /* внешний отступ */
+    margin-bottom: 26px;
+}
+
+/* поле ввода названия дела  */
+.newdo-name__title {
+    /* ширина */
+    width: 359px;
+
+    /* внутренний отступ */
+    padding: 12px 10px;
+}
+
+/* описание дела */
+.newdo-description {
+    /* внешний отступ */
+    margin-bottom: 22px;
+}
+
+/* стилизуем метки для блоков */
+.newdo-name-label,
+.newdo-description-label {
+    /* внешний отступ */
+    margin-bottom: 6px;
+
+    /* размер шрифта */
+    font-size: 14px;
+
+    /* цвета шрифта */
+    color: #8993ad;
+    display: inline-block;
+}
+
+/* поле для ввода описания дела (textarea)*/
+.newdo-description__desc {
+    /* Запрещаем изменять размер */
+    resize: none;
+
+    /* ширина textarea*/
+    width: 359px;
+
+    /* высота textarea */
+    height: 205px;
+
+    padding: 10px;
+}
+
+/* кнопка добавления дела */
+#btn-add {
+    /* цвет фона */
+    background: #2174fe;
+
+    /* внутренний отступ */
+    padding: 17px 52px;
+
+    /* убираю границу */
+    border: 0;
+
+    /* цвет текста */
+    color: #fff;
+
+    /* размер текста */
+    font-size: 16px;
+
+    /* при наведении, меняем тип курсора */
+    cursor: pointer;
+}
+
+/* при заполнении подсвечиваем границу */
+.newdo-name__title:required:valid,
+.newdo-description__desc:required:valid {
+    border-color: green;
+}
+
+/* класс для изменения внешнего отступа */
+.list-contain {
+    margin-bottom: 29px;
+}
